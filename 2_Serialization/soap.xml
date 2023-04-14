@@ -1,0 +1,33 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<SOAP-ENC:Array SOAP-ENC:arrayType="a1:Person[3]" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/_2_Serialization/2_Serialization%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<item href="#ref-3"/>
+<item href="#ref-4"/>
+<item href="#ref-5"/>
+</SOAP-ENC:Array>
+<a1:Person id="ref-3" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/_2_Serialization/2_Serialization%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<_x003C_Name_x003E_k__BackingField id="ref-6">Ларри Пейдж</_x003C_Name_x003E_k__BackingField>
+<_x003C_Age_x003E_k__BackingField>42</_x003C_Age_x003E_k__BackingField>
+<_x003C_Company_x003E_k__BackingField href="#ref-7"/>
+</a1:Person>
+<a1:Person id="ref-4" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/_2_Serialization/2_Serialization%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<_x003C_Name_x003E_k__BackingField id="ref-8">Сатья Наделла</_x003C_Name_x003E_k__BackingField>
+<_x003C_Age_x003E_k__BackingField>48</_x003C_Age_x003E_k__BackingField>
+<_x003C_Company_x003E_k__BackingField href="#ref-9"/>
+</a1:Person>
+<a1:Person id="ref-5" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/_2_Serialization/2_Serialization%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<_x003C_Name_x003E_k__BackingField id="ref-10">Тим Кук</_x003C_Name_x003E_k__BackingField>
+<_x003C_Age_x003E_k__BackingField>55</_x003C_Age_x003E_k__BackingField>
+<_x003C_Company_x003E_k__BackingField href="#ref-11"/>
+</a1:Person>
+<a1:Company id="ref-7" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/_2_Serialization/2_Serialization%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<_x003C_Name_x003E_k__BackingField id="ref-12">Google</_x003C_Name_x003E_k__BackingField>
+</a1:Company>
+<a1:Company id="ref-9" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/_2_Serialization/2_Serialization%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<_x003C_Name_x003E_k__BackingField id="ref-13">Microsoft</_x003C_Name_x003E_k__BackingField>
+</a1:Company>
+<a1:Company id="ref-11" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/_2_Serialization/2_Serialization%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<_x003C_Name_x003E_k__BackingField id="ref-14">Apple</_x003C_Name_x003E_k__BackingField>
+</a1:Company>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
