@@ -81,10 +81,15 @@ namespace _2_Serialization
     }
 
     [Serializable]
-    [KnownType(typeof(Flash))]
+    [KnownType(typeof(Flash))] //Применяйте атрибут KnownTypeAttribute к типу,
+                               //чтобы указать DataContractSerializer типы,
+                               //которые должны распознаваться при сериализации
+                               //или десериализации экземпляра типа, к которому применяется атрибут.
     [KnownType(typeof(DVD))]
     [KnownType(typeof(HDD))]
-    [XmlInclude(typeof(Flash))]
+    [XmlInclude(typeof(Flash))] // При применении XmlIncludeAttributeукажите Type производный класс.
+                                // XmlSerializer При сериализации объектов, включающих как базовый,
+                                // так и производный класс, он может распознать оба типа объектов.
     [XmlInclude(typeof(DVD))]
     [XmlInclude(typeof(HDD))]
     [DataContract]
@@ -222,8 +227,10 @@ namespace _2_Serialization
                     Console.WriteLine("18.JSON-десериализация коллекции");
                     Console.WriteLine("19.JSON-сериализация массива объектов");
                     Console.WriteLine("20.JSON-десериализация массива объектов");
-                    Console.WriteLine("21.Сериализация объектов производных классов");
-                    Console.WriteLine("22.Десериализация объектов производных классов");
+                    Console.WriteLine("21.JSON-Сериализация объектов производных классов");
+                    Console.WriteLine("22.JSON-Десериализация объектов производных классов");
+                    Console.WriteLine("23.XML-Сериализация объектов производных классов");
+                    Console.WriteLine("24.XML-Десериализация объектов производных классов");
                     Console.WriteLine("Ваш выбор: ");
                     int choice = Convert.ToInt32(Console.ReadLine());
                     switch (choice)
@@ -426,6 +433,28 @@ namespace _2_Serialization
                             stream = new FileStream("../../device.txt", FileMode.Open);
                             jsonFormatter = new DataContractJsonSerializer(typeof(Storage[]));
                             storage = (Storage[])jsonFormatter.ReadObject(stream);
+                            for (int i = 0; i < storage.Length; i++)
+                            {
+                                storage[i].Print();
+                            }
+                            Console.WriteLine();
+                            stream.Close();
+                            break;
+                        case 23:
+                            storage = new Storage[3];
+                            storage[0] = new DVD();
+                            storage[1] = new HDD();
+                            storage[2] = new Flash();
+                            stream = new FileStream("../../device.xml", FileMode.Create);
+                            serializer = new XmlSerializer(typeof(Storage[]));
+                            serializer.Serialize(stream, storage);
+                            stream.Close();
+                            Console.WriteLine("Сериализация XML успешно выполнена!");
+                            break;
+                        case 24:
+                            stream = new FileStream("../../device.xml", FileMode.Open);
+                            serializer = new XmlSerializer(typeof(Storage[]));
+                            storage = (Storage[])serializer.Deserialize(stream);
                             for (int i = 0; i < storage.Length; i++)
                             {
                                 storage[i].Print();

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ArrayOfStorage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Storage xsi:type="DVD">
+    <Type>DVD</Type>
+    <Name>Name</Name>
+    <Model>Model</Model>
+    <Quantity>0</Quantity>
+    <Price>0</Price>
+    <WriteSpeed>0x</WriteSpeed>
+    <ReadSpeed>0x</ReadSpeed>
+  </Storage>
+  <Storage xsi:type="HDD">
+    <Type>HDD</Type>
+    <Name>Name</Name>
+    <Model>Model</Model>
+    <Quantity>0</Quantity>
+    <Price>0</Price>
+    <CapacityHDD>0</CapacityHDD>
+    <SpeedHDD>0</SpeedHDD>
+  </Storage>
+  <Storage xsi:type="Flash">
+    <Type>Flash</Type>
+    <Name>Name</Name>
+    <Model>Model</Model>
+    <Quantity>0</Quantity>
+    <Price>0</Price>
+    <CapacityUSB>0</CapacityUSB>
+    <SpeedUSB>0</SpeedUSB>
+  </Storage>
+</ArrayOfStorage>
